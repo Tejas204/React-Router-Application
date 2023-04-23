@@ -1,0 +1,12 @@
+FUnctionalities:
+1. Create a blog
+2. Delete a blog, if created by the user
+3. Edit a blog, if created by the user
+4. Add comments
+5. Rating
+6. Like a blog
+6. Sorting functionality
+    a. Sort by A-Z
+    b. Sort by Z-a
+    c. Sort by Rating
+    d. Sort by likes
