@@ -4,6 +4,7 @@ import { Routes,Route } from 'react-router-dom';
 import Home from './Components/Home';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
+import OrderSummary from './Components/OrderSummary';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
     <>
     {/* Navbar: Utilizes the routes defined above to provide clickable links*/}
     <Navbar></Navbar>
-    
+
     <Routes>
       {/* Route has 2 props: path and element
           1. Path --> the destination to which we should be directed; for root element it is '/'
@@ -20,6 +21,7 @@ function App() {
       */}
       <Route path='/' element={<Home/>}></Route>
       <Route path='about' element={<About/>}></Route>
+      <Route path='order-summary' element={<OrderSummary/>}></Route>
     </Routes>
 
     

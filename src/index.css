@@ -23,3 +23,21 @@ nav a{
   padding: 5px;
 }
 
+/* nav a.active{
+  color: #24AFC1;
+  font-weight: bold;
+} */
+
+
+.submit-button{
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #24Afc1;
+  border-radius: 10px;
+  color: #24Afc1;
+}
+
+.submit-button:hover{
+  color: white;
+  background-color: #24Afc1;
+}
