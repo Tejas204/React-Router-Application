@@ -5,13 +5,13 @@ const Navbar = () => {
     const isActiveStyle = ({ isActive }) => {
         return {
             fontWeight: isActive ? 'bold' : 'normal',
-            color: isActive ? '#24AFC1' : 'white'
+            color: isActive ? '#24AFC1' : 'black'
         }
     }
 
 
   return (
-    <nav>
+    <nav className='primary-nav'>
         {/* To navigate to another route using links, react-router-dom provides us with
         the Link component 
             1. Link provides an anchor component in the dom 
@@ -30,11 +30,15 @@ const Navbar = () => {
 
         {/* The navlink component knows whether it is active or not thus helping us style the active link.
             The navlink component receives the active class if the link points to current route */}
+        <NavLink to='/'>Home</NavLink>
+        <NavLink to='/about'>About</NavLink>
+        <NavLink to='/products'>Products</NavLink>
 
         {/* Another way to apply style to active link is using the isActive boolean flag embedded in style. See function isActiveStyle() above*/}
         {/* Note: For this to work, corresponding style in index.css is commented */}
-        <NavLink to='/' style={isActiveStyle}>Home</NavLink>
+        {/* <NavLink to='/' style={isActiveStyle}>Home</NavLink>
         <NavLink to='/about' style={isActiveStyle}>About</NavLink>
+        <NavLink to='/products' style={isActiveStyle}>Products</NavLink> */}
     </nav>
   )
 }
