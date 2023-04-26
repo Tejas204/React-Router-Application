@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const Products = () => {
   return (
@@ -10,8 +10,14 @@ const Products = () => {
 
         <nav className='secondary-nav'>
             {/* Note: we dont use / for nested routes as of now */}
+
+            {/* Even though we created nested routes in App.js; React does not know where to render the components.
+                For this, we have a component called as 'Outlet'; added just below the Link component*/}
             <Link to='featured'>Featured</Link>
             <Link to='new'>New</Link>
+
+            {/* Outlet component */}
+            <Outlet/>
         </nav>
     </>
   )
