@@ -35,6 +35,10 @@ function App() {
           2. React Router automatically forms a path when we nest one route inside another. */}
 
       <Route path='products' element={<Products/>}>
+        {/* 1. The index route is also a nested route. Its path is same as that of parent.
+            2. The difference is that it will display the element of a specified child route
+               so that the page does not remain empty */}
+        <Route index element={<FeaturedProducts/>}></Route>
         <Route path='featured' element={<FeaturedProducts/>}></Route>
         <Route path='new' element={<NewProducts/>}></Route>
       </Route>
