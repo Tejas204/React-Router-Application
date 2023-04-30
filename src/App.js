@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { Routes,Route } from 'react-router-dom';
 import Home from './Components/Home';
@@ -11,6 +11,8 @@ import FeaturedProducts from './Components/FeaturedProducts';
 import NewProducts from './Components/NewProducts';
 import Users from './Components/Users';
 import UserDetails from './Components/UserDetails';
+
+const LazyAbout = React.lazy(() => import('./Components/About'));
 
 function App() {
   return (
@@ -28,7 +30,7 @@ function App() {
 
       
       <Route path='/' element={<Home/>}></Route>
-      <Route path='about' element={<About/>}></Route>
+      <Route path='about' element={<React.Suspense fallback='Loading...'><LazyAbout/></React.Suspense>}></Route>
       <Route path='order-summary' element={<OrderSummary/>}></Route>
 
       {/* 1. Below is an example of nested routes.
